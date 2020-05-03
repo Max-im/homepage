@@ -129,7 +129,7 @@
       }
     }
 
-    theElement.img.src = 'https://i.dlpng.com/static/png/401204_preview.png';
+    theElement.img.src = 'https://https://github.com/Max-im/homepagegitgit/assets/dollar.png';
 
     theElement.img.onload = function () {
       theElement.width = theElement.img.width / 2;
