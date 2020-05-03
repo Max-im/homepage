@@ -129,7 +129,8 @@
       }
     }
 
-    theElement.img.src = 'https://https://github.com/Max-im/homepagegitgit/assets/dollar.png';
+    theElement.img.src =
+      'https://raw.githubusercontent.com/Max-im/homepage/master/assets/dollar.png';
 
     theElement.img.onload = function () {
       theElement.width = theElement.img.width / 2;
