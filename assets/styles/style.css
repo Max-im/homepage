@@ -1,0 +1,150 @@
+main {
+  position: relative;
+}
+main:after {
+  content: '';
+  position: absolute;
+  background: radial-gradient(circle, #777, #777 1px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0)) 0 0/30px
+    30px;
+  width: 100%;
+  height: 400px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.avatar {
+  width: 120%;
+  margin: 20px 0 0 0;
+}
+
+.contacts {
+  display: flex;
+  margin: 40px 0 0 0;
+}
+.contact {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #777;
+  border-right: none;
+}
+.contacts .tooltip:last-child {
+  border-right: 1px solid #777;
+}
+.tooltip:hover .tooltip__text {
+  display: block;
+}
+
+.contact__icon {
+  color: #777;
+  font-size: 16px;
+}
+
+.contacts .tooltip {
+  margin-right: 0px;
+  text-align: center;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tooltip__text {
+  position: absolute;
+  white-space: nowrap;
+  background: #212121;
+  color: #fff;
+  font-family: serif;
+  padding: 3px 10px;
+  opacity: 1;
+  left: -20px;
+  min-width: 80px;
+  top: -30px;
+  animation: shake 0.3s;
+  line-height: 15px;
+  display: none;
+}
+
+.tooltip__text:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #212121;
+  transform: rotate(45deg);
+  bottom: -5px;
+  left: calc(50% - 5px);
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.name {
+  text-shadow: 1px 1px 1px #000;
+}
+
+.hidden {
+  display: none;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+  z-index: -2;
+}
+
+.dropdown__content_far {
+  top: 1000px !important;
+  opacity: 0 !important;
+}
+
+.dropdown__content {
+  opacity: 1;
+  transition: 0.4s;
+  background: linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+    linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+    linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+    linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+  position: absolute;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 2px;
+  transition: all 0.5s;
+  will-change: opacity;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  z-index: 1;
+  top: 50px;
+  left: 0;
+}
+
+.dropdown {
+  position: relative;
+}
